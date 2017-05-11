@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE132A57-8094-47E3-A23B-4CE262397870}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS.UserControls</RootNamespace>
+    <AssemblyName>UserControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>cc.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCButton.Designer.cs">
+      <DependentUpon>CCButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCButtonGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCButtonGrid.Designer.cs">
+      <DependentUpon>CCButtonGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCMenuInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCMenuInfo.Designer.cs">
+      <DependentUpon>CCMenuInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCOrderDishInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CCOrderDishInfo.Designer.cs">
+      <DependentUpon>CCOrderDishInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCustomDishTable.cs" />
+    <Compile Include="ColorLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboboxItem.cs" />
+    <Compile Include="CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomLabel.Designer.cs">
+      <DependentUpon>CustomLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DishCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EllipseButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InputUserNameInitial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MsgBox.designer.cs">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupNotifier.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PopupNotifierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupNotifierForm.Designer.cs">
+      <DependentUpon>PopupNotifierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupNotifierListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupNotifierListForm.Designer.cs">
+      <DependentUpon>PopupNotifierListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="topLogo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaterMarkTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Controls\ColorizedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Controls\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Controls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Controls\ShadedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Forms\AnimatedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Forms\DropShadow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Forms\RoundedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\Forms\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Classes\MsgboxUI.cs" />
+    <Compile Include="Windows\Classes\Win32.cs" />
+    <Compile Include="Windows\Common.cs" />
+    <Compile Include="Windows\frmMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\frmMsgBox.Designer.cs">
+      <DependentUpon>frmMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XPButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XPButton.Designer.cs">
+      <DependentUpon>XPButton.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CCButton.resx">
+      <DependentUpon>CCButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCButtonGrid.resx">
+      <DependentUpon>CCButtonGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCMenuInfo.resx">
+      <DependentUpon>CCMenuInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCOrderDishInfo.resx">
+      <DependentUpon>CCOrderDishInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputUserNameInitial.resx">
+      <DependentUpon>InputUserNameInitial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.ja-JP.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MsgBox.resx">
+      <DependentUpon>MsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupNotifierForm.resx">
+      <DependentUpon>PopupNotifierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupNotifierListForm.resx">
+      <DependentUpon>PopupNotifierListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="topLogo.resx">
+      <DependentUpon>topLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Classes\Forms\RoundedForm.resx">
+      <DependentUpon>RoundedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Classes\Forms\ShadowedForm.resx">
+      <DependentUpon>ShadowedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\frmMsgBox.resx">
+      <DependentUpon>frmMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cc.pfx" />
+    <None Include="Resources\search_16x16.png" />
+    <None Include="Windows\Rsp.Windows.Forms.suo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Button_Gray_Stripe_01_050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\collapse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\collapse_hightlight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\delete.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\delete2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\delete-un.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\expand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\expand_highlight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\grip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\iconcsv16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\iconexcel16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\iconexit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_Gray_Stripe_01_050.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse_hightlight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-un.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand_highlight.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconcsv16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconexcel16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconexit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+    <Content Include="license.txt" />
+    <Content Include="Resources\Add.ico" />
+    <Content Include="Resources\AddDeadMan.ico" />
+    <Content Include="Resources\Category.ico" />
+    <Content Include="Resources\CategoryDelete.ico" />
+    <Content Include="Resources\CC11.ico" />
+    <Content Include="Resources\ColorizedButton.bmp" />
+    <Content Include="Resources\Delete.ico" />
+    <Content Include="Resources\Delete_noshadow.ico" />
+    <Content Include="Resources\DialogBackground.JPG" />
+    <Content Include="Resources\Down.png" />
+    <Content Include="Resources\Exception_Amber_1.ico" />
+    <Content Include="Resources\Exception_Amber_2.ico" />
+    <Content Include="Resources\Exception_Red_1.ico" />
+    <Content Include="Resources\Exception_Red_2.ico" />
+    <Content Include="Resources\Exlamation.png" />
+    <Content Include="Resources\FixtureDelete.ico" />
+    <Content Include="Resources\fixture_compound.ico" />
+    <Content Include="Resources\HelpBack.ico" />
+    <Content Include="Resources\HelpNext.ico" />
+    <Content Include="Resources\Keyboard.ico" />
+    <Content Include="Resources\log3.bmp" />
+    <Content Include="Resources\PlanogramAdd.ico" />
+    <Content Include="Resources\PlanogramDelete.ico" />
+    <Content Include="Resources\Print %282%29.ico" />
+    <Content Include="Resources\Print.ico" />
+    <Content Include="Resources\Question.png" />
+    <Content Include="Resources\Statistics.ico" />
+    <Content Include="Resources\Statistics_grey.ico" />
+    <Content Include="Resources\Status.ico" />
+    <Content Include="Resources\Store_filter.ico" />
+    <Content Include="Resources\undo.png" />
+    <Content Include="Resources\Up.png" />
+    <Content Include="Resources\Update.ico" />
+    <Content Include="Resources\Update_Merch_Text.ico" />
+    <Content Include="Windows\NumericTextBox.bmp" />
+    <Content Include="Windows\Resources\Close.png" />
+    <Content Include="Windows\Resources\ColorizedButton.bmp" />
+    <Content Include="Windows\Resources\DialogBackground.JPG" />
+    <Content Include="Windows\Resources\Exlamation.png" />
+    <None Include="Windows\Resources\Question1.png" />
+    <None Include="Windows\Resources\Exlamation1.png" />
+    <Content Include="Windows\Resources\OK.png" />
+    <Content Include="Windows\Resources\Question.png" />
+    <Content Include="Windows\Resources\undo.png" />
+    <Content Include="Windows\RoundedButton.bmp" />
+    <Content Include="Windows\Rsp.Windows.Forms.csproj" />
+    <Content Include="Windows\Rsp.Windows.Forms.csproj.vspscc" />
+    <Content Include="Windows\Rsp.Windows.Forms.sln" />
+    <Content Include="Windows\Rsp.Windows.Forms.vssscc" />
+    <Content Include="Windows\ShadedButton.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

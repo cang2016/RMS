@@ -1,0 +1,11 @@
+2015-04-04 10:35:58.810【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.Logging.DbLoggingHelper”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\DataAccess\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Logging.DbLoggingHelper..cctor() 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 22
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.Logging.DbLoggingHelper.WriteLogToDb(LogEntry logEntry)
+   在 RMS.Logging.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.Logging.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55

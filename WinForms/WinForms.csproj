@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01188D36-9AC3-4406-81EB-BA2E34BDDF23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS.WinForms</RootNamespace>
+    <AssemblyName>WinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v15.1.Win, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.UI, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.1.Wizard, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Presets, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Win, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v15.1.Extensions, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="SkinForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SkinForm.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.5.0.39820, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentUIForms.cs" />
+    <Compile Include="DockSample\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\Customization\DockHelper.cs" />
+    <Compile Include="DockSample\Customization\Extender.cs" />
+    <Compile Include="DockSample\Customization\InertButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DockSample\Customization\Resources.Designer.cs" />
+    <Compile Include="DockSample\Customization\Strings.Designer.cs" />
+    <Compile Include="DockSample\Customization\VS2003AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DockSample\Customization\VS2003DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DockSample\Customization\VS2003DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyDoc.Designer.cs">
+      <DependentUpon>DummyDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\DummyOutputWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyOutputWindow.Designer.cs">
+      <DependentUpon>DummyOutputWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\DummyPropertyWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyPropertyWindow.Designer.cs">
+      <DependentUpon>DummyPropertyWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\DummySolutionExplorer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummySolutionExplorer.Designer.cs">
+      <DependentUpon>DummySolutionExplorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\DummyTaskList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyTaskList.Designer.cs">
+      <DependentUpon>DummyTaskList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\DummyToolbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\DummyToolbox.Designer.cs">
+      <DependentUpon>DummyToolbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\MainForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\MainForm2.Designer.cs">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DockSample\Properties\Resources.Designer.cs" />
+    <Compile Include="DockSample\Properties\Settings.Designer.cs" />
+    <Compile Include="DockSample\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DockSample\ToolWindow.Designer.cs">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControl\frmMainScreenControl.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainInfo.Designer.cs">
+      <DependentUpon>frmMainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainTool.Designer.cs">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessageBox2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg.Designer.cs">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderDishes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderDishes.Designer.cs">
+      <DependentUpon>frmOrderDishes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPinyinAndCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSimpleCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DockSample\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\Customization\Resources.resx" />
+    <EmbeddedResource Include="DockSample\Customization\Strings.resx" />
+    <EmbeddedResource Include="DockSample\DummyDoc.resx">
+      <DependentUpon>DummyDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\DummyOutputWindow.resx">
+      <DependentUpon>DummyOutputWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\DummyPropertyWindow.resx">
+      <DependentUpon>DummyPropertyWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\DummySolutionExplorer.resx">
+      <DependentUpon>DummySolutionExplorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\DummyTaskList.resx">
+      <DependentUpon>DummyTaskList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\DummyToolbox.resx">
+      <DependentUpon>DummyToolbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\MainForm2.resx">
+      <DependentUpon>MainForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.AboutDialog.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.Customization.Resources.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.Customization.Strings.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummyDoc.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummyOutputWindow.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummyPropertyWindow.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummySolutionExplorer.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummyTaskList.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.DummyToolbox.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.MainForm.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.MainForm2.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.Properties.Resources.resources" />
+    <EmbeddedResource Include="DockSample\obj\Debug\DockSample.ToolWindow.resources" />
+    <EmbeddedResource Include="DockSample\Properties\Resources.resx" />
+    <EmbeddedResource Include="DockSample\ToolWindow.resx">
+      <DependentUpon>ToolWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainInfo.resx">
+      <DependentUpon>frmMainInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainTool.resx">
+      <DependentUpon>frmMainTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExit.resx">
+      <DependentUpon>frmExit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessageBox2.resx">
+      <DependentUpon>frmMessageBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg.resx">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderDishes.resx">
+      <DependentUpon>frmOrderDishes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPinyinAndCode.resx">
+      <DependentUpon>frmPinyinAndCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectArea.resx">
+      <DependentUpon>frmSelectArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSimpleCalc.resx">
+      <DependentUpon>frmSimpleCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DockSample\bin\Debug\DockPanel.config" />
+    <None Include="DockSample\bin\Debug\DockSample.vshost.exe.manifest" />
+    <None Include="DockSample\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DockSample\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DockSample\obj\Debug\DockSample.csproj.GenerateResource.Cache" />
+    <None Include="DockSample\obj\Debug\DockSample.csprojResolveAssemblyReference.cache" />
+    <None Include="DockSample\Properties\Settings.settings" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\1_100.gif" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\5.ico" />
+    <None Include="Resources\AddBtn_down.png" />
+    <None Include="Resources\afternoon.jpg" />
+    <None Include="Resources\aio_head_normal.png" />
+    <None Include="Resources\aio_quickbar_cut.png" />
+    <None Include="Resources\aio_quickbar_face.png" />
+    <None Include="Resources\aio_quickbar_flirtationface.png" />
+    <None Include="Resources\aio_quickbar_font.png" />
+    <None Include="Resources\aio_quickbar_inputassist.png" />
+    <None Include="Resources\aio_quickbar_more.png" />
+    <None Include="Resources\aio_quickbar_register.png" />
+    <None Include="Resources\aio_quickbar_richface.png" />
+    <None Include="Resources\aio_quickbar_screen1.png" />
+    <None Include="Resources\aio_quickbar_screen2.png" />
+    <None Include="Resources\aio_quickbar_sendpic.png" />
+    <None Include="Resources\aio_quickbar_twitter.png" />
+    <None Include="Resources\AIO_SetBtn_down.png" />
+    <None Include="Resources\AIO_SetBtn_highlight.png" />
+    <None Include="Resources\AIO_SetBtn_highlight_normal.png" />
+    <None Include="Resources\AIO_SetBtn_normal.png" />
+    <None Include="Resources\allbtn_down.png" />
+    <None Include="Resources\allbtn_highlight.png" />
+    <None Include="Resources\all_inside_bkg.png" />
+    <None Include="Resources\All_logo32-xp.ico" />
+    <None Include="Resources\AM_MenuICON.png" />
+    <None Include="Resources\app_icon_16.png" />
+    <None Include="Resources\AV_Accept.png" />
+    <None Include="Resources\AV_New_Mic_Style3.png" />
+    <None Include="Resources\AV_Refuse.png" />
+    <None Include="Resources\AV_VDC_Bkg.png" />
+    <None Include="Resources\away %282%29.png" />
+    <None Include="Resources\b9m0_0.png" />
+    <None Include="Resources\back.PNG" />
+    <None Include="Resources\back2.PNG" />
+    <None Include="Resources\BackPalace.png" />
+    <None Include="Resources\BCF_Title32.ico" />
+    <None Include="Resources\Boot.png" />
+    <None Include="Resources\Boot1.png" />
+    <None Include="Resources\btn_close_disable.png" />
+    <None Include="Resources\btn_close_down.png" />
+    <None Include="Resources\btn_close_highlight.png" />
+    <None Include="Resources\btn_max_down.png" />
+    <None Include="Resources\btn_max_highlight.png" />
+    <None Include="Resources\btn_max_normal.png" />
+    <None Include="Resources\btn_mini_down.png" />
+    <None Include="Resources\btn_mini_highlight.png" />
+    <None Include="Resources\btn_mini_normal.png" />
+    <None Include="Resources\btn_restore_down.png" />
+    <None Include="Resources\btn_restore_highlight.png" />
+    <None Include="Resources\btn_restore_normal.png" />
+    <None Include="Resources\btn_set_hover.png" />
+    <None Include="Resources\btn_set_normal.png" />
+    <None Include="Resources\btn_set_press.png" />
+    <None Include="Resources\btn_Skin_down.png" />
+    <None Include="Resources\btn_Skin_highlight.png" />
+    <None Include="Resources\btn_Skin_normal.png" />
+    <None Include="Resources\busy %282%29.png" />
+    <None Include="Resources\button_login_down.png" />
+    <None Include="Resources\button_login_hover.png" />
+    <None Include="Resources\button_login_normal.png" />
+    <None Include="Resources\checkbox_hightlight.png" />
+    <None Include="Resources\checkbox_normal.png" />
+    <None Include="Resources\checkbox_pushed.png" />
+    <None Include="Resources\checkbox_tick_highlight.png" />
+    <None Include="Resources\checkbox_tick_normal.png" />
+    <None Include="Resources\checkbox_tick_pushed.png" />
+    <None Include="Resources\ContactTipsVASFlagExt_Camera.png" />
+    <None Include="Resources\corner_back.png" />
+    <None Include="Resources\corner_back_hover.png" />
+    <None Include="Resources\corner_back_press.png" />
+    <None Include="Resources\corner_left.png" />
+    <None Include="Resources\corner_left_hover.png" />
+    <None Include="Resources\corner_left_press.png" />
+    <None Include="Resources\corner_right.png" />
+    <None Include="Resources\corner_right_hover.png" />
+    <None Include="Resources\corner_right_press.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\duozhanghao1.png" />
+    <None Include="Resources\duozhanghao2.png" />
+    <None Include="Resources\duozhanghao3.png" />
+    <None Include="Resources\duozhanghao4.png" />
+    <None Include="Resources\duozhanghao5.png" />
+    <None Include="Resources\duozhanghao6.png" />
+    <None Include="Resources\frameBorderEffect_mouseDownDraw.png" />
+    <None Include="Resources\frameBorderEffect_normalDraw.png" />
+    <None Include="Resources\girl.png" />
+    <None Include="Resources\group.ico" />
+    <None Include="Resources\GVideoTurnOffVideo.png" />
+    <None Include="Resources\GVideoTurnOnVideo.png" />
+    <None Include="Resources\GVideo_Icon_48.png" />
+    <None Include="Resources\GVShareVideoCloseSpk_MouseOver.png" />
+    <None Include="Resources\GVShareVideoCloseSpk_Normal.png" />
+    <None Include="Resources\HDVideoHangs.png" />
+    <None Include="Resources\HDVideoPiP.png" />
+    <None Include="Resources\icon_weibo.png" />
+    <None Include="Resources\imgRjp.BackgroundImage.png" />
+    <None Include="Resources\imoffline %282%29.png" />
+    <None Include="Resources\imonline %282%29.png" />
+    <None Include="Resources\inputbox.png" />
+    <None Include="Resources\inputbox_hover.png" />
+    <None Include="Resources\invisible %282%29.png" />
+    <None Include="Resources\login_inputbtn_down.png" />
+    <None Include="Resources\login_inputbtn_highlight.png" />
+    <None Include="Resources\login_inputbtn_normal.png" />
+    <None Include="Resources\menu_btn_highlight.png" />
+    <None Include="Resources\menu_btn_normal.png" />
+    <None Include="Resources\menu_check.png" />
+    <None Include="Resources\mima.png" />
+    <None Include="Resources\mima_hover.png" />
+    <None Include="Resources\mima_press.png" />
+    <None Include="Resources\morning.jpg" />
+    <None Include="Resources\mute %282%29.png" />
+    <None Include="Resources\NetState_Point4.png" />
+    <None Include="Resources\night.jpg" />
+    <None Include="Resources\noon.jpg" />
+    <None Include="Resources\normal_group_40.png" />
+    <None Include="Resources\Norml.png" />
+    <None Include="Resources\pictureBox1.Image.png" />
+    <None Include="Resources\Qme %282%29.png" />
+    <None Include="Resources\QQAddBuddyNormal.png" />
+    <None Include="Resources\remind_highlight.png" />
+    <None Include="Resources\RemoteHelp.png" />
+    <None Include="Resources\spin_normal_down.png" />
+    <None Include="Resources\texture.png" />
+    <None Include="Resources\texture2.png" />
+    <None Include="Resources\ToolbarBtnDown.png" />
+    <None Include="Resources\ToolbarBtnNormal.png" />
+    <None Include="Resources\trad_group.png" />
+    <None Include="Resources\VASFlagEnable.png" />
+    <None Include="Resources\VideoWaitToAnswer.png" />
+    <None Include="Resources\win_icon_16.ico" />
+    <None Include="Resources\zhuce.png" />
+    <None Include="Resources\zhuce_hover.png" />
+    <None Include="Resources\zhuce_press.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{da367cbc-73db-419a-96ad-741fcdd9e264}</Project>
+      <Name>Business %28Business\Business%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{2eb8b9ef-bcac-41c0-9160-6af4c21f123b}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{b9ef4c55-0bf7-4985-bd89-199c5acf9407}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{4cc39a5d-e68a-4d45-97da-85c35d0c1a0f}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UICommon\UICommon.csproj">
+      <Project>{47e583fa-4ba7-4782-b13b-c102bb23a81e}</Project>
+      <Name>UICommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserControls\UserControls.csproj">
+      <Project>{de132a57-8094-47e3-a23b-4ce262397870}</Project>
+      <Name>UserControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a1b2bc17-ba8b-43a0-8a00-d48940696492}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\TableType\a_1.gif" />
+    <None Include="bin\Debug\TableType\a_2.gif" />
+    <None Include="bin\Debug\TableType\a_2.jpg" />
+    <None Include="bin\Debug\TableType\a_1.jpg" />
+    <Content Include="DockSample\bin\Debug\DockSample.exe" />
+    <Content Include="DockSample\bin\Debug\DockSample.pdb" />
+    <Content Include="DockSample\bin\Debug\DockSample.vshost.exe" />
+    <Content Include="DockSample\bin\Debug\license.txt" />
+    <Content Include="DockSample\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll" />
+    <Content Include="DockSample\bin\Debug\WeifenLuo.WinFormsUI.Docking.pdb" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="DockSample\Customization\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneCaption_AutoHideNo.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneCaption_AutoHideYes.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneCaption_CloseDisabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneCaption_CloseEnabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_CloseDisabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_CloseEnabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_ScrollLeftDisabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_ScrollLeftEnabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_ScrollRightDisabled.bmp" />
+    <Content Include="DockSample\Customization\Resources\DockPaneStrip_ScrollRightEnabled.bmp" />
+    <Content Include="DockSample\Images\ArrowDown.bmp" />
+    <Content Include="DockSample\Images\ArrowUp.bmp" />
+    <Content Include="DockSample\Images\Bitmap.ico" />
+    <Content Include="DockSample\Images\BlankIcon.ico" />
+    <Content Include="DockSample\Images\ClosedFolder.ICO" />
+    <Content Include="DockSample\Images\CSFile.ico" />
+    <Content Include="DockSample\Images\CSProject.ico" />
+    <Content Include="DockSample\Images\File.ico" />
+    <Content Include="DockSample\Images\Form.ico" />
+    <Content Include="DockSample\Images\Mouse.bmp" />
+    <Content Include="DockSample\Images\msenv22.ico" />
+    <Content Include="DockSample\Images\New.ico" />
+    <Content Include="DockSample\Images\Open.ico" />
+    <Content Include="DockSample\Images\OpenFolder.ICO" />
+    <Content Include="DockSample\Images\OutputWindow.ico" />
+    <Content Include="DockSample\Images\PropertyWindow.ico" />
+    <Content Include="DockSample\Images\Reference.ico" />
+    <Content Include="DockSample\Images\References.ico" />
+    <Content Include="DockSample\Images\SolutionExplorer.ico" />
+    <Content Include="DockSample\Images\TaskListWindow.ico" />
+    <Content Include="DockSample\Images\ToolboxWindow.ico" />
+    <Content Include="DockSample\Images\XmlFile.ico" />
+    <Content Include="DockSample\license.txt" />
+    <Content Include="DockSample\obj\Debug\DockSample.csproj.FileListAbsolute.txt" />
+    <Content Include="DockSample\obj\Debug\DockSample.exe" />
+    <Content Include="DockSample\obj\Debug\DockSample.pdb" />
+    <Content Include="DockSample\obj\Debug\TempPE\Customization.Resources.Designer.cs.dll" />
+    <Content Include="DockSample\obj\Debug\TempPE\Customization.Strings.Designer.cs.dll" />
+    <Content Include="DockSample\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="DockSample\Resources\DockPanel.xml" />
+    <None Include="Resources\bg0.jpg" />
+    <None Include="Resources\bg_03.gif" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

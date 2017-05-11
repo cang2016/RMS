@@ -1,0 +1,5 @@
+F:\RMS\RMS\UIControls\bin\Debug\UIControls.dll
+F:\RMS\RMS\UIControls\bin\Debug\UIControls.pdb
+F:\RMS\RMS\UIControls\obj\Debug\UIControls.dll
+F:\RMS\RMS\UIControls\obj\Debug\UIControls.pdb
+F:\RMS\RMS\UIControls\obj\Debug\UIControls.csprojResolveAssemblyReference.cache

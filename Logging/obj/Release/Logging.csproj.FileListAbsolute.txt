@@ -1,0 +1,14 @@
+F:\RMS\RMS\Logging\bin\Release\Logging.dll
+F:\RMS\RMS\Logging\bin\Release\Logging.pdb
+F:\RMS\RMS\Logging\bin\Release\Utility.dll
+F:\RMS\RMS\Logging\bin\Release\Utility.pdb
+F:\RMS\RMS\Logging\obj\Release\Logging.csprojResolveAssemblyReference.cache
+F:\RMS\RMS\Logging\obj\Release\Logging.dll
+F:\RMS\RMS\Logging\obj\Release\Logging.pdb
+F:\RMS\RMS\Logging\bin\Release\Logging.dll.config
+F:\RMS\build\Logging.dll.config
+F:\RMS\build\Logging.dll
+F:\RMS\build\Logging.pdb
+F:\RMS\RMS\build\Logging.dll.config
+F:\RMS\RMS\build\Logging.dll
+F:\RMS\RMS\build\Logging.pdb

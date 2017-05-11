@@ -1,0 +1,11 @@
+F:\RMS\RMS\FormsControls\bin\Debug\FormsControls.dll
+F:\RMS\RMS\FormsControls\bin\Debug\FormsControls.pdb
+F:\RMS\build\FormsControls.dll
+F:\RMS\build\FormsControls.pdb
+F:\RMS\RMS\build\FormsControls.dll
+F:\RMS\RMS\build\FormsControls.pdb
+F:\RMS\RMS\FormsControls\obj\Debug\FormsControls.csprojResolveAssemblyReference.cache
+F:\RMS\RMS\FormsControls\obj\Debug\RMS.FormsControls.Properties.Resources.resources
+F:\RMS\RMS\FormsControls\obj\Debug\FormsControls.csproj.GenerateResource.Cache
+F:\RMS\RMS\FormsControls\obj\Debug\FormsControls.dll
+F:\RMS\RMS\FormsControls\obj\Debug\FormsControls.pdb

@@ -1,0 +1,8 @@
+F:\RMS\RMS\UserControls\bin\Release\UserControls.dll
+F:\RMS\RMS\UserControls\bin\Release\UserControls.pdb
+F:\RMS\RMS\UserControls\obj\Release\UserControls.dll
+F:\RMS\RMS\UserControls\obj\Release\UserControls.pdb
+F:\RMS\build\UserControls.dll
+F:\RMS\build\UserControls.pdb
+F:\RMS\RMS\build\UserControls.dll
+F:\RMS\RMS\build\UserControls.pdb

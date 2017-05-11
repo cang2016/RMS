@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EB8B9EF-BCAC-41C0-9160-6AF4C21F123B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS.DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\build\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConfig\DbConfiguration.cs" />
+    <Compile Include="DBConfig\DbConfigurations.cs" />
+    <Compile Include="DBConfig\DbConfigurationColl.cs" />
+    <Compile Include="DBCore\BaseConfigFactory.cs" />
+    <Compile Include="DBCore\BaseConfigInfo.cs" />
+    <Compile Include="DBCore\DbFactory.cs" />
+    <Compile Include="DBCore\DbOperation.cs" />
+    <Compile Include="DBCore\DbOperationEx.cs" />
+    <Compile Include="DBCore\DbOperationExx.cs" />
+    <Compile Include="DBCore\DbTypeWrapper.cs" />
+    <Compile Include="DBCore\IBaseConfigInfo.cs" />
+    <Compile Include="DBCore\IDbConnectionString.cs" />
+    <Compile Include="DBCore\IDbOperation.cs" />
+    <Compile Include="DBCore\IDbProvider.cs" />
+    <Compile Include="DBCore\IDbProviderName.cs" />
+    <Compile Include="DBMap\DbMapper.cs" />
+    <Compile Include="DBMap\DbMapperExtension.cs" />
+    <Compile Include="DBMap\EntitiesQuery.cs" />
+    <Compile Include="DBMap\EntityReader.cs" />
+    <Compile Include="DBMap\IDbMapper.cs" />
+    <Compile Include="DBMap\IQuery.cs" />
+    <Compile Include="DBMap\MapperBase.cs" />
+    <Compile Include="DBMap\MapperConstant.cs" />
+    <Compile Include="DBMap\OperationType.cs" />
+    <Compile Include="DBMySql\MySqlConfigInfo.cs" />
+    <Compile Include="DBMySql\MySqlConn.cs" />
+    <Compile Include="DBMySql\MySqlDbMapper.cs" />
+    <Compile Include="DBMySql\MySqlDbMapperEx.cs" />
+    <Compile Include="DBMySql\MySqlFactory.cs" />
+    <Compile Include="DBMySql\MySqlProvider.cs" />
+    <Compile Include="DBOleDb\OleDbConn.cs" />
+    <Compile Include="DBOleDb\OleDbExecute.cs" />
+    <Compile Include="DBOleDb\OleDbFactory.cs" />
+    <Compile Include="DBOleDb\OleDbMapper.cs" />
+    <Compile Include="DBOleDb\OleDbMapperEx.cs" />
+    <Compile Include="DBOleDb\OleDbProvider.cs" />
+    <Compile Include="DBOracle\OracleConn.cs" />
+    <Compile Include="DBOracle\OracleDbMapper.cs" />
+    <Compile Include="DBOracle\OracleDbTypeWrapper.cs" />
+    <Compile Include="DBOracle\OracleExecute.cs" />
+    <Compile Include="DBOracle\OracleFactory.cs" />
+    <Compile Include="DBOracle\OracleMapperEx.cs" />
+    <Compile Include="DBOracle\OracleProvider.cs" />
+    <Compile Include="DBSqlite\SqliteConfigInfo.cs" />
+    <Compile Include="DBSqlite\SqliteConn.cs" />
+    <Compile Include="DBSqlite\SqliteDbMapper.cs" />
+    <Compile Include="DBSqlite\SqliteExecute.cs" />
+    <Compile Include="DBSqlite\SqliteFactory.cs" />
+    <Compile Include="DBSqlite\SqliteMapperEx.cs" />
+    <Compile Include="DBSqlite\SqliteProvider.cs" />
+    <Compile Include="DBSqlServer\SqlServerConfigInfo.cs" />
+    <Compile Include="DBSqlServer\SqlServerConn.cs" />
+    <Compile Include="DBSqlServer\SqlServerDbMapper.cs" />
+    <Compile Include="DBSqlServer\SqlServerDbTypeWrapper.cs" />
+    <Compile Include="DBSqlServer\SqlServerExecute.cs" />
+    <Compile Include="DBSqlServer\SqlServerFactory.cs" />
+    <Compile Include="DBSqlServer\SqlServerMapperEx.cs" />
+    <Compile Include="DBSqlServer\SqlServerProvider.cs" />
+    <Compile Include="DBUtil\BaseEntity.cs" />
+    <Compile Include="DBUtil\Common.cs" />
+    <Compile Include="DBUtil\CustomDataException.cs" />
+    <Compile Include="DBUtil\ExistingItemProcessType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{4cc39a5d-e68a-4d45-97da-85c35d0c1a0f}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a1b2bc17-ba8b-43a0-8a00-d48940696492}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBConfig\App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

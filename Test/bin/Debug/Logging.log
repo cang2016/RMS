@@ -1,0 +1,282 @@
+2015-03-13 19:46:26.254【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.DataAccess.BaseConfigFactory”的类型初始值设定项引发异常。 ---> System.Configuration.ConfigurationErrorsException: 加载配置文件时出错: 不支持 URI 格式。 ---> System.ArgumentException: 不支持 URI 格式。
+   在 System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)
+   在 System.IO.Path.GetFullPathInternal(String path)
+   在 System.IO.Path.GetFullPath(String path)
+   在 System.Configuration.ClientConfigPaths..ctor(String exePath, Boolean includeUserConfig)
+   在 System.Configuration.ClientConfigPaths.GetPaths(String exePath, Boolean includeUserConfig)
+   在 System.Configuration.ClientConfigurationHost.GetStreamName(String configPath)
+   在 System.Configuration.Internal.DelegatingConfigHost.GetStreamName(String configPath)
+   在 System.Configuration.BaseConfigurationRecord.InitConfigFromFile()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Configuration.ConfigurationSchemaErrors.ThrowIfErrors(Boolean ignoreLocal)
+   在 System.Configuration.BaseConfigurationRecord.ThrowIfParseErrors(ConfigurationSchemaErrors schemaErrors)
+   在 System.Configuration.Configuration..ctor(String locationSubPath, Type typeConfigHost, Object[] hostInitConfigurationParams)
+   在 System.Configuration.ClientConfigurationHost.OpenExeConfiguration(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath)
+   在 System.Configuration.ConfigurationManager.OpenExeConfigurationImpl(ConfigurationFileMap fileMap, Boolean isMachine, ConfigurationUserLevel userLevel, String exePath, Boolean preLoad)
+   在 System.Configuration.ConfigurationManager.OpenExeConfiguration(String exePath)
+   在 RMS.DataAccess.DBSqlServer.SqlServerConfigInfo..ctor() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerConfigInfo.cs:行号 38
+   在 RMS.DataAccess.BaseConfigFactory..cctor() 位置 f:\RMS\RMS\DataAccess\DBCore\BaseConfigFactory.cs:行号 19
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.DataAccess.BaseConfigFactory.get_Instance()
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.get_Factory() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 74
+   在 RMS.DataAccess.DbOperation`2.CreateConnection() 位置 f:\RMS\RMS\DataAccess\DBCore\DbOperation.cs:行号 46
+   在 RMS.DataAccess.DbOperationExx`2.ExecuteNonQuery(String[] dbParams, Object[] dbValues, String tbName, Boolean containsIdentityColumn) 位置 f:\RMS\RMS\DataAccess\DBCore\DbOperationExx.cs:行号 376
+   在 RMS.DataAccess.DbMapper`3.Insert(T record, Boolean containsIdentityColumn) 位置 f:\RMS\RMS\DataAccess\DBMap\DbMapper.cs:行号 231
+   在 RMS.DataAccess.DBSqlServer.SqlServerMapperEx.Insert[T](T t, Boolean containsIdentityColumn) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerMapperEx.cs:行号 14
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogTodb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 66
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 42
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 11:22:33.861【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.DataAccess.BaseConfigFactory”的类型初始值设定项引发异常。 ---> System.MissingMethodException: 无法创建接口的实例。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 RMS.DataAccess.BaseConfigFactory..cctor() 位置 f:\RMS\RMS\DataAccess\DBCore\BaseConfigFactory.cs:行号 41
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.DataAccess.BaseConfigFactory.get_InstanceDic()
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.MakeParam(String ParamName, DbTypeWrapper DbType, Int32 Size, ParameterDirection Direction, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 141
+   在 RMS.DataAccess.DbFactory`2.MakeInParam(String ParamName, DbTypeWrapper DbType, Int32 Size, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 101
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 146
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 11:27:57.883【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.DataAccess.BaseConfigFactory”的类型初始值设定项引发异常。 ---> System.MissingMethodException: 无法创建接口的实例。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 RMS.DataAccess.BaseConfigFactory..cctor() 位置 f:\RMS\RMS\DataAccess\DBCore\BaseConfigFactory.cs:行号 41
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.DataAccess.BaseConfigFactory.get_InstanceDic()
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.MakeParam(String ParamName, DbTypeWrapper DbType, Int32 Size, ParameterDirection Direction, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 141
+   在 RMS.DataAccess.DbFactory`2.MakeInParam(String ParamName, DbTypeWrapper DbType, Int32 Size, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 101
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 146
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 11:33:22.092【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.DataAccess.BaseConfigFactory”的类型初始值设定项引发异常。 ---> System.MissingMethodException: 无法创建接口的实例。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 RMS.DataAccess.BaseConfigFactory..cctor() 位置 f:\RMS\RMS\DataAccess\DBCore\BaseConfigFactory.cs:行号 41
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.DataAccess.BaseConfigFactory.get_InstanceDic()
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.MakeParam(String ParamName, DbTypeWrapper DbType, Int32 Size, ParameterDirection Direction, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 141
+   在 RMS.DataAccess.DbFactory`2.MakeInParam(String ParamName, DbTypeWrapper DbType, Int32 Size, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 101
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 146
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 11:38:58.024【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.MakeParam(String ParamName, DbTypeWrapper DbType, Int32 Size, ParameterDirection Direction, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 141
+   在 RMS.DataAccess.DbFactory`2.MakeInParam(String ParamName, DbTypeWrapper DbType, Int32 Size, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 101
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 146
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 11:44:03.034【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.TypeInitializationException: “RMS.DataAccess.BaseConfigFactory”的类型初始值设定项引发异常。 ---> System.MissingMethodException: 无法创建接口的实例。
+   在 System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   在 System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   在 System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   在 System.Activator.CreateInstance(Type type)
+   在 RMS.DataAccess.BaseConfigFactory..cctor() 位置 f:\RMS\RMS\DataAccess\DBCore\BaseConfigFactory.cs:行号 41
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 RMS.DataAccess.BaseConfigFactory.get_InstanceDic()
+   在 RMS.DataAccess.SqlServerFactory`1.get_DbProviderName() 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerFactory.cs:行号 15
+   在 RMS.DataAccess.DbFactory`2.get_Provider() 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 45
+   在 RMS.DataAccess.DbFactory`2.MakeParam(String ParamName, DbTypeWrapper DbType, Int32 Size, ParameterDirection Direction, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 141
+   在 RMS.DataAccess.DbFactory`2.MakeInParam(String ParamName, DbTypeWrapper DbType, Int32 Size, Object Value) 位置 f:\RMS\RMS\DataAccess\DBCore\DbFactory.cs:行号 101
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 146
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:30:31.220【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 尝试下载新的 URL file:///F:/RMS/RMS/Test/bin/Debug/DataAccess.dll。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:30:31.325【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 相同的绑定已出现过，因 hr = 0x80070002 而失败。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:30:37.825【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 尝试下载新的 URL file:///F:/RMS/RMS/Test/bin/Debug/DataAccess.dll。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:30:37.860【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 相同的绑定已出现过，因 hr = 0x80070002 而失败。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:31:03.382【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 尝试下载新的 URL file:///F:/RMS/RMS/Test/bin/Debug/DataAccess.dll。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 17:31:03.419【INTERNAL】asus|009| [AppenderAttachedImpl: Failed to append to appender [db]] [System.IO.FileNotFoundException: 未能加载文件或程序集“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”或它的某一个依赖项。系统找不到指定的文件。
+文件名:“file:///F:\RMS\RMS\Test\bin\Debug\DataAccess.dll”
+   在 System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   在 System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   在 System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 33
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51
+
+=== 预绑定状态信息 ===
+日志: Where-ref 绑定。位置 = F:\RMS\RMS\Test\bin\Debug\DataAccess.dll
+日志: Appbase = file:///F:/RMS/RMS/Test/bin/Debug/
+日志: 初始 PrivatePath = NULL
+调用程序集: (Unknown)。
+===
+日志: 此绑定从 LoadFrom 加载上下文开始。
+警告: 将不在 LoadFrom 上下文中探测本机映像。仅在默认加载上下文中探测本机映像，例如，使用 Assembly.Load()。
+日志: 正在使用应用程序配置文件: F:\RMS\RMS\Test\bin\Debug\Test.vshost.exe.Config
+日志: 使用主机配置文件: 
+日志: 使用 C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config 的计算机配置文件。
+日志: 相同的绑定已出现过，因 hr = 0x80070002 而失败。
+] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 19:10:12.816【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.Reflection.AmbiguousMatchException: 发现不明确的匹配。
+   在 System.RuntimeType.GetMethodImpl(String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConv, Type[] types, ParameterModifier[] modifiers)
+   在 System.Type.GetMethod(String name)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 61
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-14 19:10:14.103【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.Reflection.AmbiguousMatchException: 发现不明确的匹配。
+   在 System.RuntimeType.GetMethodImpl(String name, BindingFlags bindingAttr, Binder binder, CallingConventions callConv, Type[] types, ParameterModifier[] modifiers)
+   在 System.Type.GetMethod(String name)
+   在 RMS.Appender.ConcreteAppenders.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 61
+   在 RMS.Appender.ConcreteAppenders.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55
+2015-03-15 23:49:22.142【INTERNAL】asus|010| [AppenderAttachedImpl: Failed to append to appender [db]] [System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.InvalidOperationException: 超时时间已到。超时时间已到，但是尚未从池中获取连接。出现这种情况可能是因为所有池连接均在使用，并且达到了最大池大小。
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 RMS.DataAccess.DbOperation`2.ExecuteScalar(CommandType commandType, String commandText, DbParameter[] commandParameters) 位置 f:\RMS\RMS\DataAccess\DBCore\DbOperation.cs:行号 1025
+   在 RMS.DataAccess.DbOperation`2.ExecuteScalar(String commandText, DbParameter[] commandParameters) 位置 f:\RMS\RMS\DataAccess\DBCore\DbOperation.cs:行号 1052
+   在 RMS.DataAccess.SqlServerExecute.TableExists(String tableName) 位置 f:\RMS\RMS\DataAccess\DBSqlServer\SqlServerExecute.cs:行号 149
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   在 System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 RMS.Logging.DbLoggingHelper.WriteLogToDb(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\DbLoggingHelper.cs:行号 45
+   在 RMS.Logging.SqlDbAppender.DoAppender(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\Appender\ConcreteAppenders\SqlDbAppender.cs:行号 29
+   在 RMS.Logging.AppenderAttachedImpl.AppendLoopOnAppenders(LogEntry logEntry) 位置 f:\RMS\RMS\Logging\AppenderAttachedImpl.cs:行号 51] |AppendLoopOnAppenders in AppenderAttachedImpl.cs:55

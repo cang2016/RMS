@@ -1,0 +1,7 @@
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\bin\Debug\Rsp.Windows.Forms.dll
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\bin\Debug\Rsp.Windows.Forms.pdb
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\obj\Debug\Rsp.Windows.Forms.frmMsgBox.resources
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\obj\Debug\Rsp.Windows.Forms.Properties.Resources.resources
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\obj\Debug\Rsp.Windows.Forms.csproj.GenerateResource.Cache
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\obj\Debug\Rsp.Windows.Forms.dll
+F:\RMS资料\将来用\rspcontrols\rspcontrols\Rsp.Windows.Forms\obj\Debug\Rsp.Windows.Forms.pdb

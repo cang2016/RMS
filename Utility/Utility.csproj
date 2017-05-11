@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2BC17-BA8B-43A0-8A00-D48940696492}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RMS.Utility</RootNamespace>
+    <AssemblyName>Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArgumentsGuard.cs" />
+    <Compile Include="AsyncOperation.cs" />
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Collections\Algorithms.cs" />
+    <Compile Include="Collections\Bag.cs" />
+    <Compile Include="Collections\BigList.cs" />
+    <Compile Include="Collections\CollectionBase.cs" />
+    <Compile Include="Collections\Comparers.cs" />
+    <Compile Include="Collections\Deque.cs" />
+    <Compile Include="Collections\DictionaryBase.cs" />
+    <Compile Include="Collections\Hash.cs" />
+    <Compile Include="Collections\IgnoreCaseDictionary.cs" />
+    <Compile Include="Collections\ListBase.cs" />
+    <Compile Include="Collections\MultiDictionary.cs" />
+    <Compile Include="Collections\MultiDictionaryBase.cs" />
+    <Compile Include="Collections\OrderedBag.cs" />
+    <Compile Include="Collections\OrderedDictionary.cs" />
+    <Compile Include="Collections\OrderedMultiDictionary.cs" />
+    <Compile Include="Collections\OrderedSet.cs" />
+    <Compile Include="Collections\Pair.cs" />
+    <Compile Include="Collections\ReadOnlyCollectionBase.cs" />
+    <Compile Include="Collections\ReadOnlyDictionaryBase.cs" />
+    <Compile Include="Collections\ReadOnlyListBase.cs" />
+    <Compile Include="Collections\ReadOnlyMultiDictionaryBase.cs" />
+    <Compile Include="Collections\RedBlack.cs" />
+    <Compile Include="Collections\SerializableDictionary.cs" />
+    <Compile Include="Collections\Set.cs" />
+    <Compile Include="Collections\SortableBindingList.cs" />
+    <Compile Include="Collections\Strings.cs" />
+    <Compile Include="Collections\Util.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\ConfigManager.cs" />
+    <Compile Include="Configuration\ConfigurationConstants.cs" />
+    <Compile Include="Configuration\ExpandableObjectConverter.cs" />
+    <Compile Include="Configuration\IniEntry.cs" />
+    <Compile Include="Configuration\IniManager.cs" />
+    <Compile Include="Configuration\InternalLogger.cs" />
+    <Compile Include="Configuration\IWinFormConfigEditorPlugin.cs" />
+    <Compile Include="Configuration\PropertyGridUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuration\PropertyGridUserControl.Designer.cs">
+      <DependentUpon>PropertyGridUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\PropertyValueChangedCollectionEditor.cs" />
+    <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="Configuration\SettingsManager.cs" />
+    <Compile Include="Configuration\WinFormConfigEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\WinFormConfigEditor.Designer.cs">
+      <DependentUpon>WinFormConfigEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\XmlConverter.cs" />
+    <Compile Include="Cryptography\DEncrypt.cs" />
+    <Compile Include="Cryptography\DESEncrypt.cs" />
+    <Compile Include="Cryptography\Encrypt.cs" />
+    <Compile Include="Cryptography\HashEncode.cs" />
+    <Compile Include="Cryptography\MySecurity.cs" />
+    <Compile Include="Cryptography\RSACryption.cs" />
+    <Compile Include="Cryptography\SimpleCryptography.cs" />
+    <Compile Include="DataTableNameAttribute.cs" />
+    <Compile Include="DateTime\DateTimeEx.cs" />
+    <Compile Include="Dynamic\DynamicJson.cs" />
+    <Compile Include="Dynamic\DynamicXml.cs" />
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="ExtensionMethods\ArrayExtensions.cs" />
+    <Compile Include="ExtensionMethods\BoolExtensions.cs" />
+    <Compile Include="ExtensionMethods\ByteExtensions.cs" />
+    <Compile Include="ExtensionMethods\CollectionExtensions.cs" />
+    <Compile Include="ExtensionMethods\DateTimeExtensions.cs" />
+    <Compile Include="ExtensionMethods\EnumExtensions.cs" />
+    <Compile Include="ExtensionMethods\EventHandlerExtensions.cs" />
+    <Compile Include="ExtensionMethods\IOExtensions.cs" />
+    <Compile Include="ExtensionMethods\ObjectExtensions.cs" />
+    <Compile Include="ExtensionMethods\ReflectionExtensions.cs" />
+    <Compile Include="ExtensionMethods\SecurityExtensions.cs" />
+    <Compile Include="ExtensionMethods\SerializationExtensions.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs" />
+    <Compile Include="ExtensionMethods\WebExtensions.cs" />
+    <Compile Include="ExtensionMethods\XmlExtensions.cs" />
+    <Compile Include="Alphabetic\ChineseCharacterConvertToAlphabetic.cs" />
+    <Compile Include="Alphabetic\ChineseCharacterConvertToFirstAlphabeticr.cs" />
+    <Compile Include="Net\NetHelper.cs" />
+    <Compile Include="Reflection\ExpressionEvaluator.cs" />
+    <Compile Include="Reflection\SystemInfo.cs" />
+    <Compile Include="Reflection\NominatorExpressionVisitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reflection\PropertyAccessor.cs" />
+    <Compile Include="Reflection\PropertyEvaluator.cs" />
+    <Compile Include="Reflection\StaticReflection.cs" />
+    <Compile Include="Reflection\SubtreeExpressionVisitor.cs" />
+    <Compile Include="Reflection\TypeLoader.cs" />
+    <Compile Include="StackFrame\StackFrameTransformer.cs" />
+    <Compile Include="StackFrame\Transform.cs" />
+    <Compile Include="TableColumnAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\WinFormConfigEditor.resx">
+      <DependentUpon>WinFormConfigEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

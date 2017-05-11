@@ -1,0 +1,11 @@
+F:\RMS\RMS\Utility\bin\Release\Utility.dll
+F:\RMS\RMS\Utility\bin\Release\Utility.pdb
+F:\RMS\RMS\Utility\obj\Release\RMS.Utility.WinFormConfigEditor.resources
+F:\RMS\RMS\Utility\obj\Release\RMS.Utility.Properties.Resources.resources
+F:\RMS\RMS\Utility\obj\Release\Utility.csproj.GenerateResource.Cache
+F:\RMS\RMS\Utility\obj\Release\Utility.dll
+F:\RMS\RMS\Utility\obj\Release\Utility.pdb
+F:\RMS\build\Utility.dll
+F:\RMS\build\Utility.pdb
+F:\RMS\RMS\build\Utility.dll
+F:\RMS\RMS\build\Utility.pdb

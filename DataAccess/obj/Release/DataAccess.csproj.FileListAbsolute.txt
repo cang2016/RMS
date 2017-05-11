@@ -1,0 +1,15 @@
+F:\RMS\RMS\DataAccess\bin\Release\DataAccess.dll
+F:\RMS\RMS\DataAccess\bin\Release\DataAccess.pdb
+F:\RMS\RMS\DataAccess\bin\Release\Logging.dll
+F:\RMS\RMS\DataAccess\bin\Release\Oracle.DataAccess.dll
+F:\RMS\RMS\DataAccess\bin\Release\System.Data.SQLite.dll
+F:\RMS\RMS\DataAccess\bin\Release\Utility.dll
+F:\RMS\RMS\DataAccess\bin\Release\Logging.pdb
+F:\RMS\RMS\DataAccess\bin\Release\Utility.pdb
+F:\RMS\RMS\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
+F:\RMS\RMS\DataAccess\obj\Release\DataAccess.dll
+F:\RMS\RMS\DataAccess\obj\Release\DataAccess.pdb
+F:\RMS\build\DataAccess.dll
+F:\RMS\build\DataAccess.pdb
+F:\RMS\RMS\build\DataAccess.dll
+F:\RMS\RMS\build\DataAccess.pdb

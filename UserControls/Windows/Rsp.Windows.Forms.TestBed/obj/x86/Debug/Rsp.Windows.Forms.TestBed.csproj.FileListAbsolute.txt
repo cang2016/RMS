@@ -1,0 +1,10 @@
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\bin\Debug\RMS.UserControls.TestBed.exe
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\bin\Debug\RMS.UserControls.TestBed.pdb
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\bin\Debug\RMS.UserControls.dll
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\bin\Debug\RMS.UserControls.pdb
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.csprojResolveAssemblyReference.cache
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.Form1.resources
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.Properties.Resources.resources
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.csproj.GenerateResource.Cache
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.exe
+F:\RMS资料\将来用\rspcontrols\rspcontrols\RMS.UserControls\RMS.UserControls.TestBed\obj\x86\Debug\RMS.UserControls.TestBed.pdb

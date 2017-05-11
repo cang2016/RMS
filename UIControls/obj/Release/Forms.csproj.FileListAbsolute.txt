@@ -1,0 +1,8 @@
+F:\RMS\RMS\UIControls\bin\Release\UIControls.dll
+F:\RMS\RMS\UIControls\bin\Release\UIControls.pdb
+F:\RMS\RMS\UIControls\obj\Release\UIControls.dll
+F:\RMS\RMS\UIControls\obj\Release\UIControls.pdb
+F:\RMS\build\UIControls.dll
+F:\RMS\build\UIControls.pdb
+F:\RMS\RMS\build\UIControls.dll
+F:\RMS\RMS\build\UIControls.pdb

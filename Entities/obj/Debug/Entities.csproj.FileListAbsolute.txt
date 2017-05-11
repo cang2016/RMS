@@ -1,0 +1,14 @@
+F:\RMS\RMS\Entities\bin\Debug\Entities.dll
+F:\RMS\RMS\Entities\bin\Debug\Entities.pdb
+F:\RMS\RMS\Entities\bin\Debug\Utility.dll
+F:\RMS\RMS\Entities\bin\Debug\Utility.pdb
+F:\RMS\RMS\build\Entities.dll
+F:\RMS\RMS\build\Entities.pdb
+F:\RMS\RMS\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+F:\RMS\RMS\Entities\obj\Debug\Entities.dll
+F:\RMS\RMS\Entities\obj\Debug\Entities.pdb
+E:\RMS\RMS\build\Entities.dll
+E:\RMS\RMS\build\Entities.pdb
+E:\RMS\RMS\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+E:\RMS\RMS\Entities\obj\Debug\Entities.dll
+E:\RMS\RMS\Entities\obj\Debug\Entities.pdb
